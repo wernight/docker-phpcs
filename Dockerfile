@@ -3,6 +3,7 @@ FROM alpine:3.6
 RUN set -x \
  && apk add --no-cache \
         php7 \
+        php7-ctype \
         php7-simplexml \
         php7-tokenizer \
         php7-xmlwriter \
