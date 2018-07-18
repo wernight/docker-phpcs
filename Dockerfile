@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.8
 
 RUN set -x \
  && apk add --no-cache \
@@ -15,7 +15,7 @@ RUN set -x \
  && curl -Lo /usr/local/bin/composer https://getcomposer.org/composer.phar \
  && chmod +x /usr/local/bin/composer \
  && composer global require \
-        'squizlabs/php_codesniffer=3.0.0' \
+        'squizlabs/php_codesniffer=3.3.0' \
     # Clean-up
  && rm /usr/local/bin/composer \
  && apk del --purge .build-deps \
